@@ -1,0 +1,241 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+
+/* CTA Section */
+.cta-section {
+  background-image: linear-gradient(to right, #5a00ff, #6a8eff);
+  padding: 60px 20px;
+  margin: 60px 20px 40px;
+  border-radius: 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 0 40px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  font-size: 1.2rem;
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+/* Footer Content */
+.footer-content {
+  padding: 60px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #333;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.abt-footer-brand {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 15px;
+  color: #fff;
+}
+
+.abt-footer-tagline {
+  font-size: 0.95rem;
+  color: rgb(211, 211, 211);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.abt-footer-links {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 40px 20px;
+    margin: 40px 20px 30px;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+    margin: 0 0 30px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-content {
+    padding: 40px 20px 30px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+
+  .footer-links {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 30px 15px;
+    margin: 30px 15px 20px;
+    border-radius: 12px;
+  }
+
+  .cta-title {
+    font-size: 1.35rem;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+  }
+
+  .cta-buttons {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .footer-content {
+    padding: 30px 15px 20px;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}

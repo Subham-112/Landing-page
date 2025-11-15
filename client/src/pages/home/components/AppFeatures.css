@@ -1,0 +1,305 @@
+.app-features {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 6rem 0;
+}
+
+.features-container {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.app-header .heading {
+  font-size: 0.9rem;
+  color: rgb(211, 211, 211);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.app-header h1 {
+  font-size: 3.75rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+  letter-spacing: -0.07em;
+  line-height: 1.2;
+}
+
+.app-header p {
+  font-size: 1.135rem;
+  font-weight: 600;
+  color: #b0b0b0;
+  margin-top: 1.5rem;
+  max-width: 850px;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.app-feature-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.app-feature-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.app-feature-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.app-feature-card:nth-child(1) .app-feature-icon {
+  background-color: #cfff0033;
+}
+
+.app-feature-card:nth-child(2) .app-feature-icon {
+  background-color: #5a00ff33;
+}
+
+.app-feature-card:nth-child(3) .app-feature-icon {
+  background-color: #6a8eff33;
+}
+
+.app-feature-title {
+  font-size: 1.875rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.app-feature-card:nth-child(1) .app-feature-title {
+  color: rgb(201, 255, 0);
+}
+
+.app-feature-card:nth-child(2) .app-feature-title {
+  color: rgb(90, 0, 255);
+}
+
+.app-feature-card:nth-child(3) .app-feature-title {
+  color: rgb(106, 142, 255);
+}
+
+.app-feature-subtitle {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.app-feature-description {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* Comparison Section */
+.comparison-section {
+  margin-top: 2rem;
+  padding: 4rem 0;
+}
+
+.comparison-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.comparison-column {
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comparison-column.wisbox-column {
+  background: linear-gradient(
+    135deg,
+    rgba(201, 255, 0, 0.08) 0%,
+    rgba(201, 255, 0, 0.02) 100%
+  );
+  border: 1px solid rgba(201, 255, 0, 0.2);
+}
+
+.comparison-column-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: rgb(221, 160, 221);
+}
+
+.comparison-column-title.wisbox-title {
+  color: rgb(201, 255, 0);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-list li {
+  font-size: 0.95rem;
+  color: #c0c0c0;
+  margin-bottom: 1.2rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.comparison-list li:before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #a0a0a0;
+  font-size: 1.2rem;
+}
+
+.comparison-list.wisbox-list li:before {
+  color: rgb(201, 255, 0);
+}
+
+.comparison-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .app-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .app-feature-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .app-feature-title {
+    font-size: 1.5rem;
+  }
+
+  .comparison-grid {
+    gap: 2rem;
+  }
+
+  .comparison-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-features {
+    padding: 3rem 1rem;
+  }
+
+  .app-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .app-feature-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .app-feature-title {
+    font-size: 1.3rem;
+  }
+
+  .app-feature-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-feature-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .app-feature-description {
+    font-size: 0.85rem;
+  }
+
+  .comparison-section {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+  }
+
+  .comparison-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .comparison-column {
+    padding: 1.5rem;
+  }
+
+  .comparison-column-title {
+    font-size: 1.1rem;
+  }
+
+  .comparison-list li {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}

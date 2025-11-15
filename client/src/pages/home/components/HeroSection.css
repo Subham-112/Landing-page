@@ -1,0 +1,118 @@
+.hero-section {
+  height: calc(100vh - 78px);
+  width: 100%;
+  background: radial-gradient(circle at 20% 20%, #5900ff77 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, #d0ff0076 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, #6a8dff85 0%, transparent 40%), #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-section .absolute {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 15vw;
+  color: #ffffff10;
+  pointer-events: none;
+}
+
+.absolute.span {
+  font-size: 0.9rem;
+  color: white;
+  bottom: 3rem;
+  left: 47%;
+  opacity: 0.6;
+}
+
+.hero-content {
+  height: 89%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.hero-heading {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-content h1 {
+  width: 100%;
+  color: white;
+  font-size: 8rem;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: -8px;
+}
+
+.hero-content .hero-gradient {
+  width: 100%;
+  font-size: 8rem;
+  background: linear-gradient(90deg, #cfff00, #6a8eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.hero-gradient .market {
+  width: fit-content;
+  text-align: center;
+}
+
+.hero-content .instant {
+  margin-top: -1rem;
+}
+
+.hero-content .hero-desc {
+  width: 48%;
+  color: #cccccc;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.6px;
+}
+
+.hero-button {
+  border: none;
+  border-radius: 2rem;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem 2.5rem;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero-button:hover {
+  background: #e6e600;
+    transform: translateY(-2px);
+}
+
+.hero-button span {
+  display: flex;
+  align-items: center;
+}
+
+.hero-button p {
+  font-size: 1.2rem;
+}

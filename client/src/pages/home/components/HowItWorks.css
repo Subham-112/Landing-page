@@ -1,0 +1,118 @@
+.how-it-works {
+  width: 100%;
+  color: white;
+  background-color: #000000;
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-it-works-container {
+  max-width: 1400px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-header-label {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgb(211, 211, 211);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.how-section-title {
+  font-size: 3.75rem;
+  font-weight: bolder;
+  margin-bottom: 4rem;
+  letter-spacing: -0.07em;
+  line-height: 1.2;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.step {
+  width: 420px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #c4d700;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.step-details .icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.step-description {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .steps-container {
+    gap: 2rem;
+  }
+
+  .step {
+    padding: 1.5rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}

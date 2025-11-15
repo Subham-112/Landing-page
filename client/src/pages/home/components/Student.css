@@ -1,0 +1,264 @@
+.student-section {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 6rem 0;
+}
+
+.student-container {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.student-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Left Side */
+.student-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.student-badge {
+  font-size: 0.9rem;
+  color: rgb(211, 211, 211);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.student-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.student-highlight {
+  background: linear-gradient(90deg, #5a00ff, #d084ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.student-description {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: rgb(211, 211, 211);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* Features List */
+.student-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.student-feature-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.student-feature-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.student-feature-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #e5e7eb;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+/* CTA Button */
+.student-cta {
+  background-color: rgb(201, 255, 0);
+  color: #000;
+  border: none;
+  padding: 1rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.student-cta:hover {
+  background-color: #e8ff33;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(201, 255, 0, 0.3);
+}
+
+/* Right Side - Image */
+.student-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student-image-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+
+.student-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Badges on Image */
+.badge-trending,
+.badge-nearby {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: bounce 2s infinite;
+}
+
+.badge-trending {
+  top: 40px;
+  right: 20px;
+  background-color: #cfff00e6;
+  border-color: rgba(201, 255, 0, 0.4);
+  color: black;
+  animation-delay: 0s;
+}
+
+.badge-nearby {
+  top: 320px;
+  right: 20px;
+  background: #5a00ffe6;
+  border-color: rgba(99, 102, 241, 0.4);
+  color: white;
+  animation-delay: 0.3s;
+}
+
+.badge-icon {
+  font-size: 1.2rem;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .student-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .student-title {
+    font-size: 2.5rem;
+  }
+
+  .student-description {
+    font-size: 1rem;
+  }
+
+  .student-image-container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-section {
+    padding: 3rem 1rem;
+  }
+
+  .student-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .student-title {
+    font-size: 2rem;
+  }
+
+  .student-description {
+    font-size: 0.95rem;
+  }
+
+  .student-features {
+    gap: 1rem;
+  }
+
+  .student-feature-item {
+    gap: 0.8rem;
+  }
+
+  .student-feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .student-feature-text {
+    font-size: 0.9rem;
+  }
+
+  .student-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .student-image-container {
+    max-width: 100%;
+  }
+
+  .badge-trending,
+  .badge-nearby {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .badge-icon {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,253 @@
+.student-voice-section {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 6rem 0;
+}
+
+.student-voice-container {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.voice-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.voice-badge {
+  font-size: 0.9rem;
+  color: rgb(211, 211, 211);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.voice-title {
+  font-size: 3.75rem;
+  font-weight: 900;
+  margin: 1.5rem 0 0;
+  letter-spacing: -0.07em;
+  line-height: 1.2;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial-yellow {
+  border-color: rgba(201, 255, 0, 0.25);
+  background: linear-gradient(135deg, rgba(201, 255, 0, 0.06) 0%, rgba(201, 255, 0, 0.01) 100%);
+}
+
+.testimonial-blue {
+  border-color: rgba(99, 102, 241, 0.25);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(99, 102, 241, 0.01) 100%);
+}
+
+.testimonial-purple {
+  border-color: rgba(168, 85, 247, 0.25);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, rgba(168, 85, 247, 0.01) 100%);
+}
+
+.testimonial-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.testimonial-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  font-size: 1.25rem;
+}
+
+.star-yellow {
+  color: rgb(201, 255, 0);
+}
+
+.star-blue {
+  color: #6366f1;
+}
+
+.star-purple {
+  color: rgb(168, 85, 247);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.avatar-yellow {
+  background: rgba(201, 255, 0, 0.2);
+  color: rgb(201, 255, 0);
+}
+
+.avatar-blue {
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+}
+
+.avatar-purple {
+  background: rgba(168, 85, 247, 0.2);
+  color: rgb(168, 85, 247);
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.author-avatar-yellow {
+  background: rgba(201, 255, 0, 0.25);
+  color: rgb(201, 255, 0);
+}
+
+.author-avatar-blue {
+  background: rgba(99, 102, 241, 0.25);
+  color: #6366f1;
+}
+
+.author-avatar-purple {
+  background: rgba(168, 85, 247, 0.25);
+  color: rgb(168, 85, 247);
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.author-title {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  margin: 0.25rem 0 0;
+}
+
+@media (max-width: 1024px) {
+  .voice-title {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-voice-section {
+    padding: 3rem 1rem;
+  }
+
+  .voice-header {
+    margin-bottom: 2rem;
+  }
+
+  .voice-badge {
+    font-size: 0.8rem;
+  }
+
+  .voice-title {
+    font-size: 2rem;
+    margin: 1rem 0 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+  }
+
+  .author-title {
+    font-size: 0.75rem;
+  }
+}
