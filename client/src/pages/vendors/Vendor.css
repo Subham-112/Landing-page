@@ -172,7 +172,11 @@
 
 @media (max-width: 480px) {
   .vendor-header {
-    padding: 15px;
+    padding: 1.5rem 1rem;
+  }
+
+  .vendor-header-content {
+    flex-direction: row;
   }
 
   .vendor-logo {
@@ -399,6 +403,9 @@
 }
 
 @media (max-width: 480px) {
+  .vendor-registration {
+    padding: 0 1rem;
+  }
   .registration-container {
     padding: 20px 15px;
     border: 1px solid #333;

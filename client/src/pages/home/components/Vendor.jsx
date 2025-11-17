@@ -1,8 +1,8 @@
 import "./Vendor.css";
 
-export default function Vendor() {
+export default function Vendor({ isLoading = true }) {
   return (
-    <section className="vendor-section">
+    <section className={`vendor-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="vendor-container">
         <div className="vendor-content">
           <div className="vendor-left">

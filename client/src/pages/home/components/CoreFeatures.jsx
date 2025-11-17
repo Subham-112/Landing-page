@@ -1,7 +1,7 @@
 import { LocateFixed, Smartphone, Users, Zap } from "lucide-react";
 import "./CoreFeatures.css";
 
-export default function CoreFeatures() {
+export default function CoreFeatures({ isLoading = true }) {
   const features = [
     {
       id: 1,
@@ -33,7 +33,7 @@ export default function CoreFeatures() {
   ];
 
   return (
-    <section className="core-features">
+    <section className={`core-features ${!isLoading ? 'loaded' : ''}`}>
       <div className="core-features-container">
         <div className="features-left">
           <span className="core-section-label">[ CORE FEATURES ]</span>

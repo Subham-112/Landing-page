@@ -4,7 +4,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="abt-footer">
       {/* CTA Section */}
       <div className="cta-section">
         <div className="cta-content">
@@ -24,8 +24,8 @@ const Footer = () => {
       </div>
 
       {/* Footer Content */}
-      <div className="footer-content">
-        <div className="footer-main">
+      <div className="abt-footer-content">
+        <div className="abt-footer-main">
           <div className="abt-footer-brand">
             <h3 className="footer-logo">Wisbox</h3>
             <p className="abt-footer-tagline">Empowering local food discovery in Bhubaneswar through smart geofencing technology.</p>

@@ -1,13 +1,75 @@
 .hero-section {
   height: calc(100vh - 78px);
   width: 100%;
-  background: radial-gradient(circle at 20% 20%, #5900ff77 0%, transparent 40%),
-    radial-gradient(circle at 80% 30%, #d0ff0076 0%, transparent 40%),
-    radial-gradient(circle at 50% 80%, #6a8dff85 0%, transparent 40%), #000000;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(89, 0, 255, 0.5) 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(208, 255, 0, 0.5) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(106, 141, 255, 0.5) 0%, transparent 40%),
+    #000000;
+
+  animation:
+    heroColorPulse 6s ease-in-out infinite,
+    heroColorRotate 12s linear infinite;
+}
+
+/* Smooth hue & brightness bounce */
+@keyframes heroColorPulse {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% {
+    filter: hue-rotate(30deg) brightness(1.15);
+  }
+  100% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+}
+
+/* Anti-clockwise gradient movement */
+@keyframes heroColorRotate {
+  0% {
+    background-position:
+      20% 20%,
+      80% 30%,
+      50% 80%,
+      0% 0%;
+  }
+
+  25% {
+    background-position:
+      15% 40%,   /* moves downward-left */
+      70% 50%,   /* moves downward-left */
+      60% 70%,   /* moves upward-left */
+      0% 0%;
+  }
+
+  50% {
+    background-position:
+      30% 60%,
+      60% 70%,
+      40% 40%,
+      0% 0%;
+  }
+
+  75% {
+    background-position:
+      50% 40%,
+      40% 20%,
+      70% 50%,
+      0% 0%;
+  }
+
+  100% {
+    background-position:
+      20% 20%, /* Returns to start */
+      80% 30%,
+      50% 80%,
+      0% 0%;
+  }
 }
 
 .hero-section .absolute {
@@ -115,4 +177,45 @@
 
 .hero-button p {
   font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .absolute.span {
+    left: 40%;
+  }
+
+  .hero-content {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 4.5rem;
+    letter-spacing: -4px;
+  }
+
+  .hero-content .hero-gradient {
+    height: 150px;
+    font-size: 4.5rem;
+    margin-top: -0.2rem;
+    gap: 1.3rem;
+  }
+
+  .hero-heading {
+    width: 90%;
+  }
+
+  .hero-heading:nth-child(1) {
+    line-height: 0.9;
+  }
+
+  .hero-content .hero-desc {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 0.8rem 2rem;
+    margin-top: 0.5rem;
+  }
 }

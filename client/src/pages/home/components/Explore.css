@@ -307,7 +307,7 @@
 
 @media (max-width: 480px) {
   .explore-section {
-    min-height: 600px;
+    min-height: 300px;
   }
 
   .explore-title {

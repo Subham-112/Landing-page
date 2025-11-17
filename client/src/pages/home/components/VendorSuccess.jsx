@@ -1,7 +1,7 @@
 import { Star, MapPin, Award } from "lucide-react";
 import "./VendorSuccess.css";
 
-export default function VendorSuccess() {
+export default function VendorSuccess({ isLoading = true }) {
   const successStories = [
     {
       id: 1,
@@ -87,7 +87,7 @@ export default function VendorSuccess() {
   ];
 
   return (
-    <section className="vendor-success-section">
+    <section className={`vendor-success-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="vendor-success-container">
         <div className="vendor-suc-header">
           <span className="vendor-badge">[ VENDOR SUCCESS STORIES ]</span>
@@ -105,12 +105,12 @@ export default function VendorSuccess() {
             <div key={story.id} className="success-story-card">
               <div className="story-image-container">
                 <img src={story.image} alt={story.businessName} className="story-image" />
-                <div className="metric-badge">
-                  <span className="metric-value">{story.metric}</span>
-                  <span className="metric-label">{story.metricLabel}</span>
+                <div className="success-metric-badge">
+                  <span className="success-metric-value">{story.metric}</span>
+                  <span className="success-metric-label">{story.metricLabel}</span>
                 </div>
-                <div className="commission-badge">
-                  <span className="commission-text">{story.commissionBadge}</span>
+                <div className="success-commission-badge">
+                  <span className="success-commission-text">{story.commissionBadge}</span>
                 </div>
               </div>
 

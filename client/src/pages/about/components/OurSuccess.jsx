@@ -1,7 +1,9 @@
 import { CheckCircle, Radio } from "lucide-react";
 import "./OurSuccess.css";
+import { useState } from "react";
 
 export default function OurSuccess() {
+  const [isMobile] = useState(window.innerWidth < 768);
   const values = [
     {
       id: 1,
@@ -65,7 +67,7 @@ export default function OurSuccess() {
 
         {/* Vision Section */}
         <div className="vision-section">
-          <div className="vision-icon"><Radio size={65} color="rgb(90, 0, 255)" /></div>
+          <div className="vision-icon"><Radio size={isMobile ? 40 : 65} color="rgb(90, 0, 255)" /></div>
           
           <h2 className="vision-title">Vision 2025</h2>
           

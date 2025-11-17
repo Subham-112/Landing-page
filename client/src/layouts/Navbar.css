@@ -1,10 +1,52 @@
-.navbar {
-  background-color: #0a0e27;
+.hm-navbar {
+  background-color: black;
   padding: 1.5rem 0;
-  border-bottom: 1px solid #1a1f3a;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.navbar-item {
+  opacity: 0;
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.hm-navbar:not(.loaded) .navbar-item {
+  animation: none;
+  opacity: 0;
+}
+
+.navbar-logo {
+  animation-delay: 0.1s;
+}
+
+.navbar-menu {
+  animation-delay: 0.3s;
+}
+
+.navbar-location {
+  animation-delay: 0.5s;
+}
+
+.hamburger {
+  animation: fadeInDown 0.6s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.hm-navbar:not(.loaded) .hamburger {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .navbar-container {
@@ -14,6 +56,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-logo a {
@@ -63,13 +110,64 @@
   color: #00d4ff;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #00d4ff;
+}
+
 @media (max-width: 768px) {
+  .hm-navbar {
+    padding: 1.5rem 1rem;
+  }
+
   .navbar-container {
-    padding: 0 1rem;
+    padding: 0.35rem 1rem;
   }
 
   .navbar-menu {
-    gap: 1.5rem;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #0a0e27;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* border-bottom: 1px solid #1a1f3a; */
+  }
+
+  .navbar-menu.active {
+    max-height: 300px;
+    padding: 1rem 0;
+  }
+
+  .navbar-menu li {
+    text-align: center;
+    padding: 0.75rem 2rem;
+    /* border-bottom: 1px solid #1a1f3a; */
+  }
+
+  .navbar-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-location {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 1rem;
   }
 
   .navbar-logo a {

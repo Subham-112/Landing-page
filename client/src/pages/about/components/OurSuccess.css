@@ -248,7 +248,7 @@
 
 @media (max-width: 768px) {
   .our-success-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
   }
 
   .our-success-container {
@@ -322,16 +322,31 @@
 }
 
 @media (max-width: 480px) {
+  .our-success-container {
+    padding: 0 1rem;
+  }
+
+  .mission-section {
+    gap: 1rem;
+  }
+
   .mission-title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .mission-description {
     font-size: 0.9rem;
   }
 
+  .vision-section {
+    width: 300px;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
   .values-grid {
     gap: 0.8rem;
+    margin: 0;
   }
 
   .value-card {
@@ -348,6 +363,7 @@
 
   .vision-title {
     font-size: 1.3rem;
+    margin: 0;
   }
 
   .vision-description {
@@ -355,7 +371,14 @@
   }
 
   .vision-metrics {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .metric-box {
+    flex: 1 1 100px;
+    padding: 1rem;
   }
 
   .metric-value {

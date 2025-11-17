@@ -1,7 +1,7 @@
 import { LocateFixed, User, Users, Zap } from "lucide-react";
 import "./AppFeatures.css";
 
-export default function AppFeatures() {
+export default function AppFeatures({ isLoading = true }) {
   const features = [
     {
       id: 1,
@@ -30,7 +30,7 @@ export default function AppFeatures() {
   ];
 
   return (
-    <section className="app-features">
+    <section className={`app-features ${!isLoading ? 'loaded' : ''}`}>
       <div className="features-container">
         <div className="app-header">
           <span className="heading">[ APP FEATURES ]</span>

@@ -1,11 +1,13 @@
 import { Clock, Users } from "lucide-react";
 import "./NewFeature.css";
+import { useState } from "react";
 
-export default function NewFeature() {
+export default function NewFeature({ isLoading = true }) {
+  const [isMobile] = useState(window.innerWidth < 768);
   const features = [
     {
       id: 1,
-      icon: <Clock size={32} color="rgb(201, 255, 0)" />,
+      icon: <Clock size={isMobile ? 25 : 32} color="rgb(201, 255, 0)" />,
       title: "Food Pre-Booking",
       image: "/Images/new1.png",
       description:
@@ -20,7 +22,7 @@ export default function NewFeature() {
     },
     {
       id: 2,
-      icon: <Users size={32} color="#6366f1" />,
+      icon: <Users size={isMobile ? 25 : 32} color="#6366f1" />,
       title: "Table Reservations",
       image: "/Images/new2.png",
       description:
@@ -36,7 +38,7 @@ export default function NewFeature() {
   ];
 
   return (
-    <section className="new-feature-section">
+    <section className={`new-feature-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="new-feature-container">
         <div className="new-feature-header">
           <span className="new-feature-badge">[ NEW FEATURES ]</span>

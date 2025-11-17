@@ -1,7 +1,9 @@
+import { useState } from "react";
 import "./Bhubaneswar.css";
 import { MapPin, Users, Clock } from "lucide-react";
 
-export default function Bhubaneswar() {
+export default function Bhubaneswar({ isLoading = true }) {
+  const [isMobile] = useState(window.innerWidth < 768);
   const locations = [
     {
       id: 1,
@@ -24,7 +26,7 @@ export default function Bhubaneswar() {
   ];
 
   return (
-    <section className="bhubaneswar-section">
+    <section className={`bhubaneswar-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="bhubaneswar-container">
         {/* Part 1: Currently Serving */}
         <div className="serving-section">
@@ -43,7 +45,7 @@ export default function Bhubaneswar() {
           <div className="flagship-card">
             <div className="flagship-left">
               <div className="location-badge">
-                <MapPin size={35} color="rgb(201, 255, 0)" />
+                <MapPin size={isMobile ? 30 : 35} color="rgb(201, 255, 0)" />
               </div>
               <div className="flagship-image">
                 <img src="/Images/kiit.png" alt="KIIT University Area" />

@@ -92,20 +92,29 @@
 
 @media (max-width: 768px) {
   .how-it-works {
-    padding: 4rem 1rem;
+    padding: 4rem 0;
   }
 
-  .section-title {
+  .how-section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
 
   .steps-container {
+    flex-direction: column;
     gap: 2rem;
+    padding: 0 1.5rem;
+    margin-top: 1rem;
   }
 
   .step {
-    padding: 1.5rem;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .step-description {
+    width: 100%;
+    font-size: 0.95rem;
   }
 
   .number {

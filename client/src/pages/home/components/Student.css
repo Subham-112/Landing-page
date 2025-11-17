@@ -210,12 +210,18 @@
 
 @media (max-width: 768px) {
   .student-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
   }
 
   .student-content {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .student-left {
+    padding: 0 1rem;
+    align-items: center;
+    text-align: center;
   }
 
   .student-title {
@@ -231,7 +237,8 @@
   }
 
   .student-feature-item {
-    gap: 0.8rem;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .student-feature-icon {
@@ -241,6 +248,7 @@
 
   .student-feature-text {
     font-size: 0.9rem;
+    text-align: left;
   }
 
   .student-cta {
@@ -248,14 +256,23 @@
     font-size: 0.95rem;
   }
 
+  .student-right {
+    padding: 0 1rem;
+  }
+
   .student-image-container {
     max-width: 100%;
+    height: 40vh;
   }
 
   .badge-trending,
   .badge-nearby {
     padding: 0.5rem 0.8rem;
     font-size: 0.8rem;
+  }
+
+  .badge-nearby {
+    top: 150px;
   }
 
   .badge-icon {

@@ -1,7 +1,7 @@
 import { MapPin, Clock, Users } from "lucide-react";
 import "./Student.css";
 
-export default function Student() {
+export default function Student({ isLoading = true }) {
   const features = [
     {
       id: 1,
@@ -21,7 +21,7 @@ export default function Student() {
   ];
 
   return (
-    <section className="student-section">
+    <section className={`student-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="student-container">
         <div className="student-content">
           <div className="student-left">

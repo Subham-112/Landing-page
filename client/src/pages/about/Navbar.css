@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
 }
 
 .navbar-container {
@@ -83,43 +83,64 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
+    position: relative;
   }
 
   .navbar-container {
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 0.5rem;
   }
 
   .mobile-menu-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
+    z-index: 101;
   }
 
   .navbar-links {
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     right: 0;
     background-color: #1a1a1a;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 0;
+    padding: 0;
+    border-bottom: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    width: 100%;
+    z-index: 100;
   }
 
   .navbar-links.active {
-    max-height: 300px;
+    max-height: 400px;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-link {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0.75rem 2rem;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
   }
 
   .download-btn {
-    width: 100%;
+    width: calc(100% - 4rem);
     justify-content: center;
+    margin: 1rem 2rem;
+    border-radius: 50px;
   }
 
   .brand-logo {

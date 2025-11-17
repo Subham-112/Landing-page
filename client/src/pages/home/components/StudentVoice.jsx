@@ -1,6 +1,6 @@
 import "./StudentVoice.css";
 
-export default function StudentVoice() {
+export default function StudentVoice({ isLoading = true }) {
   const testimonials = [
     {
       id: 1,
@@ -38,36 +38,48 @@ export default function StudentVoice() {
   ];
 
   return (
-    <section className="student-voice-section">
+    <section className={`student-voice-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="student-voice-container">
         <div className="voice-header">
           <span className="voice-badge">[ STUDENT VOICES ]</span>
           <h1 className="voice-title">What KIIT Students Say</h1>
         </div>
 
-        <div className="testimonials-grid">
+        <div className="stu-testimonials-grid">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className={`testimonial-card testimonial-${testimonial.avatarColor}`}>
-              <div className="testimonial-top">
-                <div className="stars">
+            <div
+              key={testimonial.id}
+              className={`stu-testimonial-card testimonial-${testimonial.avatarColor}`}
+            >
+              <div className="stu-testimonial-top">
+                <div className="stu-stars">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className={`star star-${testimonial.ratingColor}`}>★</span>
+                    <span
+                      key={i}
+                      className={`stu-star star-${testimonial.ratingColor}`}
+                    >
+                      ★
+                    </span>
                   ))}
                 </div>
-                <div className={`avatar avatar-${testimonial.avatarColor}`}>
+                <div className={`stu-avatar avatar-${testimonial.avatarColor}`}>
                   {testimonial.avatar}
                 </div>
               </div>
 
-              <p className="testimonial-text">"{testimonial.testimonial}"</p>
+              <p className="stu-testimonial-text">
+                "{testimonial.testimonial}"
+              </p>
 
-              <div className="testimonial-author">
-                <div className={`author-avatar author-avatar-${testimonial.avatarColor}`}>
+              <div className="stu-testimonial-author">
+                <div
+                  className={`stu-author-avatar author-avatar-${testimonial.avatarColor}`}
+                >
                   {testimonial.avatar}
                 </div>
-                <div className="author-info">
-                  <h3 className="author-name">{testimonial.name}</h3>
-                  <p className="author-title">{testimonial.title}</p>
+                <div className="stu-author-info">
+                  <h3 className="stu-author-name">{testimonial.name}</h3>
+                  <p className="stu-author-title">{testimonial.title}</p>
                 </div>
               </div>
             </div>

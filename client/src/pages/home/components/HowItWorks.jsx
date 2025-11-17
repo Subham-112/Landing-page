@@ -1,9 +1,9 @@
 import { Gift, House, Search } from "lucide-react";
 import "./HowItWorks.css";
 
-export default function HowItWorks() {
+export default function HowItWorks({ isLoading = true }) {
   return (
-    <section className="how-it-works">
+    <section className={`how-it-works ${!isLoading ? 'loaded' : ''}`}>
       <div className="how-it-works-container">
         <span className="section-header-label">[ HOW IT WORKS ]</span>
         <h2 className="how-section-title">

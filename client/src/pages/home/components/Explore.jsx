@@ -1,8 +1,8 @@
 import "./Explore.css";
 
-export default function Explore() {
+export default function Explore({ isLoading = true }) {
   return (
-    <section className="explore-section">
+    <section className={`explore-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="explore-background">
         <img src="/Images/ready.png" alt="Background" className="bg-image" />
       </div>

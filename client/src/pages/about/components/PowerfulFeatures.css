@@ -175,17 +175,23 @@
     padding: 40px 15px;
   }
 
-  .p-features-title {
-    font-size: 1.5rem;
+  .features-title {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
   }
 
-  .p-features-subtitle {
+  .features-subtitle {
     font-size: 0.9rem;
     margin-bottom: 30px;
   }
 
+  .p-features-column {
+    gap: 20px;
+  }
+
   .column-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin: 0;
   }
 
   .p-features-cards {

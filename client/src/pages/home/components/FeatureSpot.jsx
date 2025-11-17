@@ -1,6 +1,6 @@
 import "./FeatureSpot.css";
 
-export default function FeatureSpot() {
+export default function FeatureSpot({ isLoading = true }) {
   const spots = [
     {
       id: 1,
@@ -53,7 +53,7 @@ export default function FeatureSpot() {
   ];
 
   return (
-    <section className="feature-spot">
+    <section className={`feature-spot ${!isLoading ? 'loaded' : ''}`}>
       <div className="spot-container">
         <div className="spot-header">
           <span>[ APP FEATURES ]</span>

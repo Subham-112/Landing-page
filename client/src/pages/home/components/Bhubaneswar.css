@@ -403,7 +403,11 @@
 
 @media (max-width: 768px) {
   .bhubaneswar-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
+  }
+
+  .bhubaneswar-container {
+    padding: 0 1rem;
   }
 
   .serving-title {
@@ -415,15 +419,36 @@
   }
 
   .flagship-card {
-    padding: 2rem;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .flagship-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .location-badge {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+
+  .flagship-image {
+    width: 130px;
+    height: 100px;
   }
 
   .flagship-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    margin: 0;
   }
 
   .flagship-description {
     font-size: 0.9rem;
+    text-align: center;
+    margin: 1rem 0;
   }
 
   .flagship-stats {
@@ -433,6 +458,14 @@
 
   .stat-item {
     padding: 1rem;
+  }
+
+  .coming-soon-section {
+    margin-top: 2rem;
+  }
+
+  .coming-soon-grid {
+    margin-bottom: 2rem;
   }
 
   .coming-soon-card {
@@ -450,7 +483,7 @@
   }
 
   .bhu-cta-section {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 0;
   }
 
   .bhu-cta-title {

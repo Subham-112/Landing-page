@@ -86,7 +86,7 @@
   display: block;
 }
 
-.metric-badge {
+.success-metric-badge {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -101,19 +101,19 @@
   z-index: 10;
 }
 
-.metric-value {
+.success-metric-value {
   font-size: 1.3rem;
   font-weight: 900;
   color: white;
 }
 
-.metric-label {
+.success-metric-label {
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
-.commission-badge {
+.success-commission-badge {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -125,7 +125,7 @@
   z-index: 10;
 }
 
-.commission-text {
+.success-commission-text {
   font-size: 0.9rem;
   font-weight: 700;
   color: #000;
@@ -271,7 +271,11 @@
 
 @media (max-width: 768px) {
   .vendor-success-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
+  }
+
+  .vendor-success-container {
+    padding: 0 1rem;
   }
 
   .vendor-suc-header {
@@ -282,12 +286,12 @@
     font-size: 0.8rem;
   }
 
-  .vendor-title {
+  .vendor-suc-header .vendor-title {
     font-size: 2rem;
     margin: 1rem 0 0.5rem;
   }
 
-  .vendor-description {
+  .vendor-suc-header .vendor-description {
     font-size: 0.95rem;
   }
 
@@ -298,26 +302,29 @@
   }
 
   .story-image-container {
-    min-height: 250px;
+    min-height: 200px;
   }
 
-  .metric-badge {
+  .success-metric-badge {
     top: 12px;
     right: 12px;
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 0.7rem;
+    gap: 0.1rem;
   }
 
-  .metric-value {
-    font-size: 1.1rem;
+  .success-metric-value {
+    font-size: 1rem;
   }
 
-  .commission-badge {
+  .success-commission-badge {
     bottom: 12px;
     left: 12px;
+    padding: 0.4rem 0.7rem;
   }
 
   .story-testimonial {
     font-size: 0.95rem;
+    font-weight: 600;
   }
 
   .vendor-avatar {
@@ -632,8 +639,12 @@
 }
 
 @media (max-width: 768px) {
+  .vendor-testimonials-section {
+    margin-top: 2rem;
+  }
+
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
@@ -651,8 +662,16 @@
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metrics-header {
+    margin-bottom: 1.5rem;
   }
 
   .metrics-section {
@@ -669,11 +688,11 @@
   }
 
   .metric-value-large {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .metric-label-large {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
 }
 

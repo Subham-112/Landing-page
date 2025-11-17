@@ -6,10 +6,10 @@ import PowerfulFeatures from "./components/PowerfulFeatures";
 import Navbar from "./Navbar";
 
 
-export default function Home() {
+export default function Home({ isLoading }) {
   return (
     <>
-      <Navbar />
+      <Navbar isLoading={isLoading} />
       <HeroSection />
       <OurSuccess />
       <PowerfulFeatures />

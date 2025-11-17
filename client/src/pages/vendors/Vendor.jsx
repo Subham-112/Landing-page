@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Vendor.css";
 import { Check, House, MapPin, CheckCircle2 } from "lucide-react";
 
-const Vendor = () => {
+const Vendor = ({ isLoading }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     vendorName: "",

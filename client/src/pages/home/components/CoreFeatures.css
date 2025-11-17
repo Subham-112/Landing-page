@@ -135,19 +135,36 @@
 
 @media (max-width: 768px) {
   .core-features {
-    padding: 4rem 1rem;
+    padding: 4rem 0;
   }
 
   .core-features-container {
-    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .features-left {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    width: 90%;
+    font-size: 1rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .feature-card {
