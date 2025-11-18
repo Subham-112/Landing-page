@@ -1,4 +1,9 @@
 import { LocateFixed, User, Users, Zap } from "lucide-react";
+import {
+  AnimatedElement,
+  StaggerContainer,
+  StaggerItem,
+} from "../../../components/AnimatedElement";
 import "./AppFeatures.css";
 
 export default function AppFeatures({ isLoading = true }) {
@@ -29,50 +34,103 @@ export default function AppFeatures({ isLoading = true }) {
     },
   ];
 
+  const comparisonFeatures = {
+    traditional: [
+      "Focus only on food delivery with limited local discovery",
+      "Miss hidden gems and authentic local food experiences",
+      "High fees burden small vendors and limit their growth",
+    ],
+    wisbox: [
+      "Nearby discovery navigation and connection tool for authentic experiences",
+      "Smart geofencing reveals local favorites and trending spots instantly",
+      "Zero commission model empowers local vendors to thrive",
+    ],
+  };
+
   return (
-    <section className={`app-features ${!isLoading ? 'loaded' : ''}`}>
+    <section className={`app-features ${!isLoading ? "loaded" : ""}`}>
       <div className="features-container">
         <div className="app-header">
-          <span className="heading fade-in-element" style={{ animationDelay: '0.1s' }}>[ APP FEATURES ]</span>
-          <h1 className="fade-in-element" style={{ animationDelay: '0.3s' }}>Your Ultimate Food Companion</h1>
-          <p className="fade-in-element" style={{ animationDelay: '0.5s' }}>
-            Wisbox is your nearby discovery navigation and connection tool,
-            designed to make finding amazing food spots effortless and fun.
-          </p>
+          <AnimatedElement animation="fadeInUp" delay={0} threshold={0.2}>
+            <span className="heading">[ APP FEATURES ]</span>
+          </AnimatedElement>
+
+          <AnimatedElement animation="fadeInUp" delay={150} threshold={0.2}>
+            <h1>Your Ultimate Food Companion</h1>
+          </AnimatedElement>
+
+          <AnimatedElement animation="fadeInUp" delay={300} threshold={0.2}>
+            <p>
+              Wisbox is your nearby discovery navigation and connection tool,
+              designed to make finding amazing food spots effortless and fun.
+            </p>
+          </AnimatedElement>
         </div>
-        <div className="app-features-grid">
-          {features.map((feature, index) => (
-            <div key={feature.id} className="app-feature-card fade-in-element" style={{ animationDelay: `${0.7 + index * 0.2}s` }}>
+
+        <StaggerContainer
+          className="app-features-grid"
+          animation="bounceIn"
+          staggerDelay={0.2}
+          threshold={0.1}
+        >
+          {features.map((feature) => (
+            <StaggerItem key={feature.id} className="app-feature-card">
               <div className="app-feature-icon">{feature.icon}</div>
               <h3 className="app-feature-title">{feature.title}</h3>
               <p className="app-feature-subtitle">{feature.subtitle}</p>
               <p className="app-feature-description">{feature.description}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
-        <div className="comparison-section fade-in-element" style={{ animationDelay: '1.3s' }}>
-          <h2 className="comparison-title">Why Wisbox is Different</h2>
-          <div className="comparison-grid">
-            <div className="comparison-column">
-              <h3 className="comparison-column-title">Traditional Food Apps</h3>
-              <ul className="comparison-list">
-                <li>Focus only on food delivery with limited local discovery</li>
-                <li>Miss hidden gems and authentic local food experiences</li>
-                <li>High fees burden small vendors and limit their growth</li>
-              </ul>
-            </div>
+        <AnimatedElement animation="fadeInUp" delay={200} threshold={0.15}>
+          <div className="comparison-section">
+            <h2 className="comparison-title">Why Wisbox is Different</h2>
+            <div className="comparison-grid">
+              <AnimatedElement
+                animation="slideInLeft"
+                delay={100}
+                threshold={0.2}
+              >
+                <div className="comparison-column">
+                  <h3 className="comparison-column-title">
+                    Traditional Food Apps
+                  </h3>
+                  <StaggerContainer animation="fadeInUp" staggerDelay={0.1}>
+                    <ul className="comparison-list">
+                      {comparisonFeatures.traditional.map((item, index) => (
+                        <StaggerItem key={index}>
+                          <li>{item}</li>
+                        </StaggerItem>
+                      ))}
+                    </ul>
+                  </StaggerContainer>
+                </div>
+              </AnimatedElement>
 
-            <div className="comparison-column wisbox-column">
-              <h3 className="comparison-column-title wisbox-title">Wisbox Advantage</h3>
-              <ul className="comparison-list wisbox-list">
-                <li>Nearby discovery navigation and connection tool for authentic experiences</li>
-                <li>Smart geofencing reveals local favorites and trending spots instantly</li>
-                <li>Zero commission model empowers local vendors to thrive</li>
-              </ul>
+              <AnimatedElement
+                animation="slideInRight"
+                delay={100}
+                threshold={0.2}
+              >
+                <div className="comparison-column wisbox-column">
+                  <h3 className="comparison-column-title wisbox-title">
+                    Wisbox Advantage
+                  </h3>
+                  <StaggerContainer animation="fadeInUp" staggerDelay={0.1}>
+                    <ul className="comparison-list wisbox-list">
+                      {comparisonFeatures.wisbox.map((item, index) => (
+                        <StaggerItem key={index}>
+                          <li>{item}</li>
+                        </StaggerItem>
+                      ))}
+                    </ul>
+                  </StaggerContainer>
+                </div>
+              </AnimatedElement>
             </div>
           </div>
-        </div>
+        </AnimatedElement>
       </div>
     </section>
   );
