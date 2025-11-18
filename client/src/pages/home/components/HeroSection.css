@@ -5,7 +5,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   position: relative;
   overflow: hidden;
   padding: 2rem 0;
@@ -56,9 +56,9 @@
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 0 2rem;
+  padding-top: 3rem;
 }
 
 .fade-in-element {
@@ -148,13 +148,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .hero-content h1 {
   width: 100%;
   color: white;
-  font-size: clamp(2.2rem, 6vw, 8rem);
+  font-size: clamp(2.8rem, 7vw, 8rem);
   text-align: center;
   font-weight: 900;
   letter-spacing: -0.02em;
@@ -165,7 +164,7 @@
 
 .hero-content .hero-gradient {
   width: 100%;
-  font-size: clamp(2.2rem, 6vw, 8rem);
+  font-size: clamp(2.8rem, 7vw, 8rem);
   background: linear-gradient(90deg, #cfff00, #6a8eff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -174,7 +173,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -0.25rem;
   line-height: 1;
   text-shadow: none;
 }
@@ -186,6 +184,11 @@
 
 .hero-content .instant {
   margin-top: -0.5rem;
+}
+
+.hero-gradient .instant,
+.hero-gradient .market {
+  will-change: auto !important;
 }
 
 .hero-content .hero-desc {
@@ -336,16 +339,23 @@
 /* Small mobile */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
     padding: 0.75rem 0;
   }
 
   .hero-content {
+    justify-content: center;
+    gap: 1rem;
     padding: 0 0.75rem;
+    margin-top: -3rem;
+  }
+
+  .hero-content .instant {
+    margin-top: 0;
   }
 
   .hero-heading {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0;
   }
 
   .hero-content .hero-desc {

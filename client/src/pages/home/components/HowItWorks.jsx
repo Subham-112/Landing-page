@@ -53,12 +53,12 @@ export default function HowItWorks({ isLoading = true }) {
           {steps.map((step) => (
             <StaggerItem key={step.id} className="step">
               <div className="step-content">
+                <span className="number">{step.id}</span>
                 <div className="step-header">
-                  <span className="number">{step.id}</span>
                   <div className="icon">{step.icon}</div>
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-description">{step.description}</p>
                 </div>
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
               </div>
             </StaggerItem>
           ))}

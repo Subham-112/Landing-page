@@ -9,7 +9,7 @@
 }
 
 .how-it-works-container {
-  max-width: 1200px;
+  max-width: 1450px;
   width: 100%;
   text-align: center;
   padding: 0 2rem;
@@ -37,9 +37,9 @@
 .steps-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
+  gap: 1.5rem;
   margin-top: 3rem;
-  max-width: 1000px;
+  max-width: 1450px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -52,7 +52,7 @@
 
 .step-content {
   text-align: left;
-  max-width: 350px;
+  max-width: 550px;
   width: 100%;
   padding: 2rem;
   border-radius: 1rem;
@@ -61,6 +61,8 @@
     rgba(255, 255, 255, 0.05) 0%,
     rgba(255, 255, 255, 0.02) 100%
   );
+  display: flex;
+  gap: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -95,11 +97,17 @@
   box-shadow: 0 20px 40px rgba(207, 255, 0, 0.1);
 }
 
+/* .step-title,
+.step-description {
+  margin-left: 80px;
+} */
+
 .step-header {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .number {
@@ -116,6 +124,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   background: rgba(207, 255, 0, 0.1);
   transition: all 0.3s ease;
@@ -129,7 +138,7 @@
 .step-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
   line-height: 1.3;
 }
