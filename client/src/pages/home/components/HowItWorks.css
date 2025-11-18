@@ -8,6 +8,32 @@
   justify-content: center;
 }
 
+.how-it-works:not(.loaded) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: none;
+}
+
+.how-it-works.loaded .fade-in-element {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .how-it-works-container {
   max-width: 1400px;
   width: 100%;

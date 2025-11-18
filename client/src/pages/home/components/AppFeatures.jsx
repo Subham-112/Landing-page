@@ -33,16 +33,16 @@ export default function AppFeatures({ isLoading = true }) {
     <section className={`app-features ${!isLoading ? 'loaded' : ''}`}>
       <div className="features-container">
         <div className="app-header">
-          <span className="heading">[ APP FEATURES ]</span>
-          <h1>Your Ultimate Food Companion</h1>
-          <p>
+          <span className="heading fade-in-element" style={{ animationDelay: '0.1s' }}>[ APP FEATURES ]</span>
+          <h1 className="fade-in-element" style={{ animationDelay: '0.3s' }}>Your Ultimate Food Companion</h1>
+          <p className="fade-in-element" style={{ animationDelay: '0.5s' }}>
             Wisbox is your nearby discovery navigation and connection tool,
             designed to make finding amazing food spots effortless and fun.
           </p>
         </div>
         <div className="app-features-grid">
-          {features.map((feature) => (
-            <div key={feature.id} className="app-feature-card">
+          {features.map((feature, index) => (
+            <div key={feature.id} className="app-feature-card fade-in-element" style={{ animationDelay: `${0.7 + index * 0.2}s` }}>
               <div className="app-feature-icon">{feature.icon}</div>
               <h3 className="app-feature-title">{feature.title}</h3>
               <p className="app-feature-subtitle">{feature.subtitle}</p>
@@ -51,7 +51,7 @@ export default function AppFeatures({ isLoading = true }) {
           ))}
         </div>
 
-        <div className="comparison-section">
+        <div className="comparison-section fade-in-element" style={{ animationDelay: '1.3s' }}>
           <h2 className="comparison-title">Why Wisbox is Different</h2>
           <div className="comparison-grid">
             <div className="comparison-column">

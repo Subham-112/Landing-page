@@ -5,13 +5,13 @@ export default function HowItWorks({ isLoading = true }) {
   return (
     <section className={`how-it-works ${!isLoading ? 'loaded' : ''}`}>
       <div className="how-it-works-container">
-        <span className="section-header-label">[ HOW IT WORKS ]</span>
-        <h2 className="how-section-title">
+        <span className={`section-header-label fade-in-element`} style={{ animationDelay: '0.1s' }}>[ HOW IT WORKS ]</span>
+        <h2 className="how-section-title fade-in-element" style={{ animationDelay: '0.3s' }}>
           Find Your Next Hangout Spot in 3 Steps
         </h2>
 
         <div className="steps-container">
-          <div className="step">
+          <div className="step fade-in-element" style={{ animationDelay: '0.5s' }}>
             <div className="step-number">
               <span className="number">01</span>
             </div>
@@ -25,7 +25,7 @@ export default function HowItWorks({ isLoading = true }) {
             </div>
           </div>
 
-          <div className="step">
+          <div className="step fade-in-element" style={{ animationDelay: '0.7s' }}>
             <div className="step-number">
               <span className="number">02</span>
             </div>
@@ -39,7 +39,7 @@ export default function HowItWorks({ isLoading = true }) {
             </div>
           </div>
 
-          <div className="step">
+          <div className="step fade-in-element" style={{ animationDelay: '0.9s' }}>
             <div className="step-number">
               <span className="number">03</span>
             </div>

@@ -52,12 +52,12 @@ export default function ImageSlide({ isLoading = true }) {
   return (
     <section className={`image-slide ${!isLoading ? 'loaded' : ''}`}>
       <div className="slide-header">
-        <span className="section-label">[ A TASTE OF BHUBANESWAR ]</span>
-        <h2 className="slide-title">The Vibe. The Food. The City.</h2>
+        <span className="section-label fade-in-element" style={{ animationDelay: '0.1s' }}>[ A TASTE OF BHUBANESWAR ]</span>
+        <h2 className="slide-title fade-in-element" style={{ animationDelay: '0.3s' }}>The Vibe. The Food. The City.</h2>
       </div>
 
       <div className="carousel-container">
-        <button className="nav-button prev" onClick={goToPrevious}>
+        <button className="nav-button prev fade-in-scale-element" style={{ animationDelay: '0.5s' }} onClick={goToPrevious}>
           ←
         </button>
 
@@ -98,7 +98,7 @@ export default function ImageSlide({ isLoading = true }) {
           </div>
         </div>
 
-        <button className="nav-button next" onClick={goToNext}>
+        <button className="nav-button next fade-in-scale-element" style={{ animationDelay: '0.7s' }} onClick={goToNext}>
           →
         </button>
       </div>
@@ -107,7 +107,8 @@ export default function ImageSlide({ isLoading = true }) {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`indicator ${index === currentSlide ? "active" : ""}`}
+            className={`indicator fade-in-scale-element ${index === currentSlide ? "active" : ""}`}
+            style={{ animationDelay: `${0.9 + index * 0.1}s` }}
             onClick={() => goToSlide(index)}
           />
         ))}

@@ -41,17 +41,17 @@ export default function NewFeature({ isLoading = true }) {
     <section className={`new-feature-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="new-feature-container">
         <div className="new-feature-header">
-          <span className="new-feature-badge">[ NEW FEATURES ]</span>
-          <h1 className="new-feature-title">Pre-Book & Reserve</h1>
-          <p className="new-feature-description">
+          <span className="new-feature-badge fade-in-element" style={{ animationDelay: '0.1s' }}>[ NEW FEATURES ]</span>
+          <h1 className="new-feature-title fade-in-element" style={{ animationDelay: '0.3s' }}>Pre-Book & Reserve</h1>
+          <p className="new-feature-description fade-in-element" style={{ animationDelay: '0.5s' }}>
             Skip the wait, secure your spot. Wisbox now offers food pre-booking and table
             reservations for a seamless dining experience.
           </p>
         </div>
 
         <div className="new-feature-grid">
-          {features.map((feature) => (
-            <div key={feature.id} className="new-feature-card">
+          {features.map((feature, index) => (
+            <div key={feature.id} className="new-feature-card scale-in-element" style={{ animationDelay: `${0.7 + index * 0.2}s` }}>
               <div className="feature-top">
                 <div className="feature-icon-box">{feature.icon}</div>
                 <h2 className="feature-card-title">{feature.title}</h2>
@@ -66,9 +66,9 @@ export default function NewFeature({ isLoading = true }) {
                 </div>
               </div>
 
-              <p className="feature-card-description">{feature.description}</p>
+              <p className="feature-card-description fade-in-element" style={{ animationDelay: `${0.9 + index * 0.2}s` }}>{feature.description}</p>
 
-              <ul className="feature-points">
+              <ul className="feature-points fade-in-element" style={{ animationDelay: `${1.0 + index * 0.2}s` }}>
                 {feature.points.map((point, idx) => (
                   <li key={idx}>{point}</li>
                 ))}

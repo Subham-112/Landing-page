@@ -31,18 +31,18 @@ export default function Bhubaneswar({ isLoading = true }) {
         {/* Part 1: Currently Serving */}
         <div className="serving-section">
           <div className="bhu-header">
-            <span className="serving-badge">[ LIVE IN BHUBANESWAR ]</span>
-            <h1 className="serving-title">
+            <span className="serving-badge fade-in-element" style={{ animationDelay: '0.1s' }}>[ LIVE IN BHUBANESWAR ]</span>
+            <h1 className="serving-title fade-in-element" style={{ animationDelay: '0.3s' }}>
               Currently Serving
               <span className="serving-highlight"> KIIT University Area</span>
             </h1>
-            <p className="serving-description">
+            <p className="serving-description fade-in-element" style={{ animationDelay: '0.5s' }}>
               Wisbox is actively serving the KIIT University area with 200+ food
               spots and 30,000+ students discovering amazing food daily.
             </p>
           </div>
 
-          <div className="flagship-card">
+          <div className="flagship-card slide-in-left" style={{ animationDelay: '0.7s' }}>
             <div className="flagship-left">
               <div className="location-badge">
                 <MapPin size={isMobile ? 30 : 35} color="rgb(201, 255, 0)" />
@@ -86,8 +86,8 @@ export default function Bhubaneswar({ isLoading = true }) {
         {/* Part 2: Coming Soon Locations */}
         <div className="coming-soon-section">
           <div className="coming-soon-grid">
-            {locations.map((location) => (
-              <div key={location.id} className="coming-soon-card">
+            {locations.map((location, index) => (
+              <div key={location.id} className="coming-soon-card scale-in-element" style={{ animationDelay: `${1.1 + index * 0.15}s` }}>
                 <div className="coming-soon-image">
                   <img src={location.image} alt={location.name} />
                 </div>
@@ -103,17 +103,17 @@ export default function Bhubaneswar({ isLoading = true }) {
           </div>
         </div>
         
-        <div className="bhu-cta-section">
+        <div className="bhu-cta-section fade-in-element" style={{ animationDelay: '1.6s' }}>
           <h2 className="bhu-cta-title">Experience Wisbox</h2>
           <p className="bhu-cta-description">
             Join thousands of users who are already discovering amazing food
             spots around campus with Wisbox's smart geofencing technology.
           </p>
           <div className="bhu-cta-buttons">
-            <button className="bhu-btn-download">
+            <button className="bhu-btn-download slide-in-up-element" style={{ animationDelay: '1.8s' }}>
               <span>↓</span> Download Wisbox
             </button>
-            <button className="bhu-btn-vendor">
+            <button className="bhu-btn-vendor slide-in-up-element" style={{ animationDelay: '2.0s' }}>
               Join as Vendor <span>→</span>
             </button>
           </div>

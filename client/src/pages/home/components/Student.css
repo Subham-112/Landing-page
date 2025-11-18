@@ -5,6 +5,94 @@
   padding: 6rem 0;
 }
 
+/* Fade In Up Animation for text */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: none;
+}
+
+.student-section.loaded .fade-in-element {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Scale In Animation for cards/items */
+.scale-in-element {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: none;
+}
+
+.student-section.loaded .scale-in-element {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Slide In Right Animation for images */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: none;
+}
+
+.student-section.loaded .slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Fade In Scale Animation for badges */
+.fade-in-scale-element {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: none;
+}
+
+.student-section.loaded .fade-in-scale-element {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .student-container {
   max-width: 1480px;
   margin: 0 auto;

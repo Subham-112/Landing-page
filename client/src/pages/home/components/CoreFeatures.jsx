@@ -36,26 +36,26 @@ export default function CoreFeatures({ isLoading = true }) {
     <section className={`core-features ${!isLoading ? 'loaded' : ''}`}>
       <div className="core-features-container">
         <div className="features-left">
-          <span className="core-section-label">[ CORE FEATURES ]</span>
-          <h2 className="main-title">
+          <span className="core-section-label fade-in-element" style={{ animationDelay: '0.1s' }}>[ CORE FEATURES ]</span>
+          <h2 className="main-title fade-in-element" style={{ animationDelay: '0.3s' }}>
             Smart discovery
             meets{" "}
             <span className="highlight">
               local taste.
             </span>
           </h2>
-          <p className="description">
+          <p className="description fade-in-element" style={{ animationDelay: '0.5s' }}>
             Wisbox transforms how you find food. Our nearby discovery navigation
             and connection tool connects you with vendors instantly, creating a
             vibrant local marketplace.
           </p>
-          <button className="learn-more-btn">Learn More →</button>
+          <button className="learn-more-btn fade-in-element" style={{ animationDelay: '0.7s' }}>Learn More →</button>
         </div>
 
         <div className="features-right">
           <div className="features-grid">
-            {features.map((feature) => (
-              <div key={feature.id} className="feature-card">
+            {features.map((feature, index) => (
+              <div key={feature.id} className="feature-card fade-in-element" style={{ animationDelay: `${0.9 + index * 0.15}s` }}>
                 <div className="feature-icon">{feature.icon}</div>
                 <h3 className="feature-title">{feature.title}</h3>
                 <p className="feature-description">{feature.description}</p>

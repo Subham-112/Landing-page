@@ -90,19 +90,19 @@ export default function VendorSuccess({ isLoading = true }) {
     <section className={`vendor-success-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="vendor-success-container">
         <div className="vendor-suc-header">
-          <span className="vendor-badge">[ VENDOR SUCCESS STORIES ]</span>
-          <h1 className="vendor-title">
+          <span className="vendor-badge fade-in-element" style={{ animationDelay: '0.1s' }}>[ VENDOR SUCCESS STORIES ]</span>
+          <h1 className="vendor-title fade-in-element" style={{ animationDelay: '0.3s' }}>
             Local Vendors <span className="vendor-highlight">Thriving Together</span>
           </h1>
-          <p className="vendor-description">
+          <p className="vendor-description fade-in-element" style={{ animationDelay: '0.5s' }}>
             Real stories from real vendors who transformed their businesses with Wisbox's
             zero-commission platform
           </p>
         </div>
 
         <div className="success-stories-grid">
-          {successStories.map((story) => (
-            <div key={story.id} className="success-story-card">
+          {successStories.map((story, index) => (
+            <div key={story.id} className="success-story-card scale-in-element" style={{ animationDelay: `${0.7 + index * 0.2}s` }}>
               <div className="story-image-container">
                 <img src={story.image} alt={story.businessName} className="story-image" />
                 <div className="success-metric-badge">
@@ -152,10 +152,11 @@ export default function VendorSuccess({ isLoading = true }) {
 
         <div className="vendor-testimonials-section">
           <div className="testimonials-grid">
-            {vendorTestimonials.map((testimonial) => (
+            {vendorTestimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className={`vendor-testimonial-card testimonial-${testimonial.avatarColor}`}
+                className={`vendor-testimonial-card testimonial-${testimonial.avatarColor} scale-in-element`}
+                style={{ animationDelay: `${1.1 + index * 0.15}s` }}
               >
                 {!testimonial.isSimple && (
                   <div className="testimonial-header">
@@ -204,12 +205,12 @@ export default function VendorSuccess({ isLoading = true }) {
 
         <div className="metrics-section">
           <div className="metrics-header">
-            <h2 className="metrics-title">Collective Success Metrics</h2>
-            <p className="metrics-subtitle">Real results from our vendor community across Bhubaneswar</p>
+            <h2 className="metrics-title fade-in-element" style={{ animationDelay: '2.0s' }}>Collective Success Metrics</h2>
+            <p className="metrics-subtitle fade-in-element" style={{ animationDelay: '2.2s' }}>Real results from our vendor community across Bhubaneswar</p>
           </div>
           <div className="metrics-grid">
             {metrics.map((metric, idx) => (
-              <div key={idx} className={`metric-card metric-${metric.color}`}>
+              <div key={idx} className={`metric-card metric-${metric.color} slide-in-up-element`} style={{ animationDelay: `${2.4 + idx * 0.15}s` }}>
                 <div className="metric-value-large">{metric.value}</div>
                 <div className="metric-label-large">{metric.label}</div>
               </div>

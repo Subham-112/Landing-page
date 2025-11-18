@@ -5,7 +5,7 @@ export default function Footer({ isLoading = true }) {
   return (
     <footer className={`footer ${!isLoading ? 'loaded' : ''}`}>
       <div className="footer-container">
-        <div className="footer-section-header">
+        <div className="footer-section-header fade-in-element" style={{ animationDelay: '0.1s' }}>
           <h3 className="footer-brand">Wisbox</h3>
           <p className="footer-description">
             Empowering local food discovery in Bhubaneswar through smart
@@ -14,7 +14,7 @@ export default function Footer({ isLoading = true }) {
         </div>
 
         <div className="footer-info">
-          <div className="footer-content-section">
+          <div className="footer-content-section fade-in-element" style={{ animationDelay: '0.3s' }}>
             <h4 className="footer-title">[ FEATURES ]</h4>
             <ul className="footer-links">
               <li>
@@ -29,7 +29,7 @@ export default function Footer({ isLoading = true }) {
             </ul>
           </div>
 
-          <div className="footer-content-section">
+          <div className="footer-content-section fade-in-element" style={{ animationDelay: '0.5s' }}>
             <h4 className="footer-title">[ FOR VENDORS ]</h4>
             <ul className="footer-links">
               <li>
@@ -44,7 +44,7 @@ export default function Footer({ isLoading = true }) {
             </ul>
           </div>
 
-          <div className="footer-content-section">
+          <div className="footer-content-section fade-in-element" style={{ animationDelay: '0.7s' }}>
             <h4 className="footer-title">[ CONTACT ]</h4>
             <div className="footer-contact">
               <p className="contact-item">

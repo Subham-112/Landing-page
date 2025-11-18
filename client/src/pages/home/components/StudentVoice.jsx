@@ -41,15 +41,16 @@ export default function StudentVoice({ isLoading = true }) {
     <section className={`student-voice-section ${!isLoading ? 'loaded' : ''}`}>
       <div className="student-voice-container">
         <div className="voice-header">
-          <span className="voice-badge">[ STUDENT VOICES ]</span>
-          <h1 className="voice-title">What KIIT Students Say</h1>
+          <span className="voice-badge fade-in-element" style={{ animationDelay: '0.1s' }}>[ STUDENT VOICES ]</span>
+          <h1 className="voice-title fade-in-element" style={{ animationDelay: '0.3s' }}>What KIIT Students Say</h1>
         </div>
 
         <div className="stu-testimonials-grid">
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`stu-testimonial-card testimonial-${testimonial.avatarColor}`}
+              className={`stu-testimonial-card testimonial-${testimonial.avatarColor} fade-in-element`}
+              style={{ animationDelay: `${0.5 + index * 0.2}s` }}
             >
               <div className="stu-testimonial-top">
                 <div className="stu-stars">

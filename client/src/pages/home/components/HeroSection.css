@@ -13,7 +13,26 @@
 
   animation:
     heroColorPulse 6s ease-in-out infinite,
-    heroColorRotate 12s linear infinite;
+    heroColorRotate 12s linear infinite,
+    fadeInUp 0.8s ease-out forwards;
+  
+  opacity: 1;
+}
+
+.hero-section:not(.loaded) {
+  animation: heroColorPulse 6s ease-in-out infinite, heroColorRotate 12s linear infinite;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: none;
+}
+
+.hero-section.loaded .fade-in-element {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 /* Smooth hue & brightness bounce */
@@ -69,6 +88,17 @@
       80% 30%,
       50% 80%,
       0% 0%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

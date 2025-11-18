@@ -3,8 +3,28 @@
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 4rem 2rem 2rem;
+}
+
+/* Fade In Up Animation for text */
+.fade-in-element {
   opacity: 0;
   transform: translateY(20px);
+  animation: none;
+}
+
+.footer.loaded .fade-in-element {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .footer-container {

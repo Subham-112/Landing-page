@@ -56,11 +56,11 @@ export default function FeatureSpot({ isLoading = true }) {
     <section className={`feature-spot ${!isLoading ? 'loaded' : ''}`}>
       <div className="spot-container">
         <div className="spot-header">
-          <span>[ APP FEATURES ]</span>
-          <h1>
+          <span className="fade-in-element" style={{ animationDelay: '0.1s' }}>[ APP FEATURES ]</span>
+          <h1 className="fade-in-element" style={{ animationDelay: '0.3s' }}>
             Your Ultimate <span className="spot-glow">Food Companion</span>
           </h1>
-          <p className="spot-description">
+          <p className="spot-description fade-in-element" style={{ animationDelay: '0.5s' }}>
             Whether it's your nearby discovery, navigation and connection tool,
             designed to make finding the best local food spots a breeze.
           </p>
@@ -69,7 +69,7 @@ export default function FeatureSpot({ isLoading = true }) {
         <div className="bento-image-container">
           {/* Large main card - spans 2x2 */}
           <div className="top-row">
-            <div className="bento-card main-card">
+            <div className="bento-card main-card scale-in-element" style={{ animationDelay: '0.7s' }}>
               <img
                 src={spots[0].img}
                 alt={spots[0].name}
@@ -87,7 +87,7 @@ export default function FeatureSpot({ isLoading = true }) {
 
             {/* Top right card */}
             <div className="right">
-              <div className="bento-card top-right">
+              <div className="bento-card top-right scale-in-element" style={{ animationDelay: '0.9s' }}>
                 <img
                   src={spots[1].img}
                   alt={spots[1].name}
@@ -103,7 +103,7 @@ export default function FeatureSpot({ isLoading = true }) {
               </div>
 
               {/* Middle right card */}
-              <div className="bento-card middle-right">
+              <div className="bento-card middle-right scale-in-element" style={{ animationDelay: '1.1s' }}>
                 <img
                   src={spots[2].img}
                   alt={spots[2].name}
@@ -122,7 +122,7 @@ export default function FeatureSpot({ isLoading = true }) {
 
           <div className="bottom-row">
             {/* Bottom row - 3 cards */}
-            <div className="bento-card small-card">
+            <div className="bento-card small-card scale-in-element" style={{ animationDelay: '1.3s' }}>
               <img
                 src={spots[3].img}
                 alt={spots[3].name}
@@ -134,7 +134,7 @@ export default function FeatureSpot({ isLoading = true }) {
               </div>
             </div>
 
-            <div className="bento-card small-card middle">
+            <div className="bento-card small-card middle scale-in-element" style={{ animationDelay: '1.5s' }}>
               <img
                 src={spots[4].img}
                 alt={spots[4].name}
@@ -146,7 +146,7 @@ export default function FeatureSpot({ isLoading = true }) {
               </div>
             </div>
 
-            <div className="bento-card small-card">
+            <div className="bento-card small-card scale-in-element" style={{ animationDelay: '1.7s' }}>
             <img src={spots[5].img} alt={spots[5].name} className="bento-image" />
             <div className="spot-info-tiny">
               <h4 className="spot-name-tiny">{spots[5].name}</h4>
