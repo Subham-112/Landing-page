@@ -1,8 +1,0 @@
-.home-container > * {
-  will-change: transform, opacity;
-}
-
-/* Exclude hero-gradient from will-change */
-.home-container .hero-gradient {
-  will-change: auto;
-}
